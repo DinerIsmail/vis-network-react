@@ -7,8 +7,6 @@ import { DataSet } from "vis-data/peer/esm/vis-data";
 import { Network } from "vis-network/peer/esm/vis-network";
 import PropTypes from "prop-types";
 
-import "vis-network/styles/vis-network.css";
-
 const defaultOptions = {
   physics: {
     stabilization: false,
