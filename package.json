@@ -40,10 +40,9 @@
   },
   "dependencies": {
     "lodash": "4.17.20",
-    "moment": "2.27.0",
     "uuid": "8.3.2",
     "vis-data": "7.1.2",
-    "vis-network": "9.1.0",
+    "vis-network": "9.1.2",
     "vis-util": "5.0.2"
   }
 }

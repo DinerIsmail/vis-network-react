@@ -1997,6 +1997,11 @@
     "array-includes" "^3.1.1"
     "object.assign" "^4.1.0"
 
+"keycharm@^0.2.0 || ^0.3.0 || ^0.4.0":
+  "integrity" "sha512-TyQTtsabOVv3MeOpR92sIKk/br9wxS+zGj4BG7CR8YbK4jM3tyIBaF0zhzeBUMx36/Q/iQLOKKOT+3jOQtemRQ=="
+  "resolved" "https://registry.npmjs.org/keycharm/-/keycharm-0.4.0.tgz"
+  "version" "0.4.0"
+
 "language-subtag-registry@~0.3.2":
   "integrity" "sha512-KPMwROklF4tEx283Xw0pNKtfTj1gZ4UByp4EsIFWLgBavJltF4TiYPc39k06zSTsLzxTVXXDSpbwaQXaFB4Qeg=="
   "resolved" "https://registry.npmjs.org/language-subtag-registry/-/language-subtag-registry-0.3.20.tgz"
@@ -2078,11 +2083,6 @@
   "version" "0.5.5"
   dependencies:
     "minimist" "^1.2.5"
-
-"moment@2.27.0":
-  "integrity" "sha512-al0MUK7cpIcglMv3YF13qSgdAIqxHTO7brRtaz3DlSULbqfazqkc5kEjNrLDOM7fsjshoFIihnU8snrP7zUvhQ=="
-  "resolved" "https://registry.npmjs.org/moment/-/moment-2.27.0.tgz"
-  "version" "2.27.0"
 
 "ms@^2.1.1":
   "integrity" "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="
@@ -2657,6 +2657,11 @@
   "resolved" "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz"
   "version" "0.2.0"
 
+"timsort@^0.3.0":
+  "integrity" "sha512-qsdtZH+vMoCARQtyod4imc2nIJwg9Cc7lPRrw9CzF8ZKR0khdr8+2nX80PBhET3tcyTtJDxAffGh2rXH4tyU8A=="
+  "resolved" "https://registry.npmjs.org/timsort/-/timsort-0.3.0.tgz"
+  "version" "0.3.0"
+
 "to-fast-properties@^2.0.0":
   "integrity" "sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog=="
   "resolved" "https://registry.npmjs.org/to-fast-properties/-/to-fast-properties-2.0.0.tgz"
@@ -2752,10 +2757,10 @@
   "resolved" "https://registry.npmjs.org/vis-data/-/vis-data-7.1.2.tgz"
   "version" "7.1.2"
 
-"vis-network@9.1.0":
-  "integrity" "sha512-rx96L144RJWcqOa6afjiFyxZKUerRRbT/YaNMpsusHdwzxrVTO2LlduR45PeJDEztrAf3AU5l2zmiG+1ydUZCw=="
-  "resolved" "https://registry.npmjs.org/vis-network/-/vis-network-9.1.0.tgz"
-  "version" "9.1.0"
+"vis-network@9.1.2":
+  "integrity" "sha512-BdapguKg7sk3NvdZaDsM7T6rNhOBFz0/F4ZScxctK4klRzQPLQPTEcmbioXaZhMkkgWymzBR3lFCxL1q+eYyAw=="
+  "resolved" "https://registry.npmjs.org/vis-network/-/vis-network-9.1.2.tgz"
+  "version" "9.1.2"
 
 "vis-util@^4.0.0 || ^5.0.0", "vis-util@^5.0.1", "vis-util@5.0.2":
   "integrity" "sha512-oPDmPc4o0uQLoKpKai2XD1DjrhYsA7MRz75Wx9KmfX84e9LLgsbno7jVL5tR0K9eNVQkD6jf0Ei8NtbBHDkF1A=="
