@@ -39,9 +39,9 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "lodash": "4.17.20",
-    "vis-data": "7.1.7",
+    "lodash": "4.17.21",
+    "vis-data": "7.1.9",
     "vis-network": "9.1.9",
-    "vis-util": "5.0.6"
+    "vis-util": "5.0.7"
   }
 }
