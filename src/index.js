@@ -1,11 +1,13 @@
+/* eslint-disable react/require-default-props */
+/* eslint-disable react/forbid-prop-types */
 /* eslint-disable linebreak-style */
 /* eslint-disable react/jsx-filename-extension */
-import React, { useEffect, useRef } from "react";
-import isEqual from "lodash/isEqual";
-import differenceWith from "lodash/differenceWith";
-import { DataSet } from "vis-data/peer/esm/vis-data";
-import { Network } from "vis-network/peer/esm/vis-network";
-import PropTypes from "prop-types";
+import React, { useEffect, useRef } from 'react';
+import isEqual from 'lodash/isEqual';
+import differenceWith from 'lodash/differenceWith';
+import { DataSet } from 'vis-data/esnext';
+import { Network } from 'vis-network/esnext';
+import PropTypes from 'prop-types';
 
 const defaultOptions = {
   physics: {
@@ -14,7 +16,7 @@ const defaultOptions = {
   autoResize: false,
   edges: {
     smooth: false,
-    color: "#000000",
+    color: '#000000',
     width: 0.5,
     arrows: {
       to: {
@@ -29,7 +31,7 @@ const Graph = ({
   data,
   options = defaultOptions,
   events = {},
-  style = { width: "100%", height: "100%" },
+  style = { width: '100%', height: '100%' },
   getNetwork,
   getNodes,
   getEdges,
@@ -43,7 +45,7 @@ const Graph = ({
     network.current = new Network(
       container.current,
       { nodes: nodes.current, edges: edges.current },
-      options
+      options,
     );
 
     if (getNetwork) {
@@ -68,16 +70,16 @@ const Graph = ({
       const nodesRemoved = differenceWith(
         nodes.current.get(),
         data.nodes,
-        idIsEqual
+        idIsEqual,
       );
       const nodesAdded = differenceWith(
         data.nodes,
         nodes.current.get(),
-        idIsEqual
+        idIsEqual,
       );
       const nodesChanged = differenceWith(
         differenceWith(data.nodes, nodes.current.get(), isEqual),
-        nodesAdded
+        nodesAdded,
       );
 
       nodes.current.remove(nodesRemoved);
@@ -89,16 +91,16 @@ const Graph = ({
       const edgesRemoved = differenceWith(
         edges.current.get(),
         data.edges,
-        isEqual
+        isEqual,
       );
       const edgesAdded = differenceWith(
         data.edges,
         edges.current.get(),
-        isEqual
+        isEqual,
       );
       const edgesChanged = differenceWith(
         differenceWith(data.edges, edges.current.get(), isEqual),
-        edgesAdded
+        edgesAdded,
       );
       edges.current.remove(edgesRemoved);
       edges.current.add(edgesAdded);
@@ -130,6 +132,7 @@ const Graph = ({
     }
 
     return () => {
+      // eslint-disable-next-line no-restricted-syntax
       for (const eventName of Object.keys(events)) {
         network.current.off(eventName, events[eventName]);
       }
