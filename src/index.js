@@ -1,5 +1,4 @@
 /* eslint-disable react/require-default-props */
-/* eslint-disable react/forbid-prop-types */
 /* eslint-disable linebreak-style */
 /* eslint-disable react/jsx-filename-extension */
 import React, { useEffect, useRef } from 'react';
@@ -7,7 +6,23 @@ import isEqual from 'lodash/isEqual';
 import differenceWith from 'lodash/differenceWith';
 import { DataSet } from 'vis-data/esnext';
 import { Network } from 'vis-network/esnext';
-import PropTypes from 'prop-types';
+
+/**
+ * @typedef {Object} GraphData
+ * @property {Array} nodes - Array of node objects
+ * @property {Array} edges - Array of edge objects
+ */
+
+/**
+ * @typedef {Object} GraphProps
+ * @property {GraphData} data - The graph data containing nodes and edges
+ * @property {Object} [options] - vis-network options object
+ * @property {Object} [events] - Event handlers object with event names as keys
+ * @property {Object} [style] - CSS style object for the container
+ * @property {Function} [getNetwork] - Callback function to receive the network instance
+ * @property {Function} [getNodes] - Callback function to receive the nodes DataSet
+ * @property {Function} [getEdges] - Callback function to receive the edges DataSet
+ */
 
 const defaultOptions = {
   physics: {
@@ -27,6 +42,11 @@ const defaultOptions = {
   },
 };
 
+/**
+ * Graph component for rendering vis-network graphs
+ * @param {GraphProps} props - Component props
+ * @returns {React.Element} The graph container element
+ */
 const Graph = ({
   data,
   options = defaultOptions,
@@ -142,14 +162,5 @@ const Graph = ({
   return <div ref={container} style={style} />;
 };
 
-Graph.propTypes = {
-  data: PropTypes.object,
-  options: PropTypes.object,
-  events: PropTypes.object,
-  style: PropTypes.object,
-  getNetwork: PropTypes.func,
-  getNodes: PropTypes.func,
-  getEdges: PropTypes.func,
-};
 
 export default Graph;
